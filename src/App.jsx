@@ -52,7 +52,7 @@ function App() {
         </div>
 
         {/* *, -, / Buttons */}
-        <div className="flex gap-4 mb-6 text-white text-2xl font-bold px-5">
+        <div className="flex gap-4 mb-2 text-white text-2xl font-bold px-5">
           <div
             onClick={() => handleClick("*")}
             className="w-1/3 bg-yellow-600 h-12 rounded-2xl flex items-center justify-center cursor-pointer"
@@ -74,49 +74,76 @@ function App() {
         </div>
 
         {/* Numbers 1–3 */}
-        <div className="flex gap-4 mb-4 text-black text-2xl font-bold px-5">
-          {[1, 2, 3].map((num) => (
-            <div
-              key={num}
-              onClick={() => handleClick(num.toString())}
-              className="w-1/3 bg-white h-12 rounded-2xl flex items-center justify-center cursor-pointer"
-            >
-              <button>{num}</button>
-            </div>
-          ))}
+        <div className="flex gap-4 px-5 text-black font-bold py-4 text-2xl">
+          <div
+            onClick={() => handleClick("1")}
+            className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center"
+          >
+            <button>1</button>
+          </div>
+          <div
+            onClick={() => handleClick("2")}
+            className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center"
+          >
+            <button>2</button>
+          </div>
+          <div
+            onClick={() => handleClick("3")}
+            className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center"
+          >
+            <button>3</button>
+          </div>
         </div>
 
         {/* Numbers 4–6 */}
-        <div className="flex gap-4 mb-4 text-black text-2xl font-bold px-5">
-          {[4, 5, 6].map((num) => (
-            <div
-              key={num}
-              onClick={() => handleClick(num.toString())}
-              className="w-1/3 bg-white h-12 rounded-2xl flex items-center justify-center cursor-pointer"
-            >
-              <button>{num}</button>
-            </div>
-          ))}
+        <div className="flex gap-4 px-5 text-black font-bold text-2xl">
+          <div
+            onClick={() => handleClick("4")}
+            className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center"
+          >
+            <button>4</button>
+          </div>
+          <div
+            onClick={() => handleClick("5")}
+            className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center"
+          >
+            <button>5</button>
+          </div>
+          <div
+            onClick={() => handleClick("6")}
+            className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center"
+          >
+            <button>6</button>
+          </div>
         </div>
 
         {/* Numbers 7–9 */}
-        <div className="flex gap-4 mb-4 text-black text-2xl font-bold px-5">
-          {[7, 8, 9].map((num) => (
-            <div
-              key={num}
-              onClick={() => handleClick(num.toString())}
-              className="w-1/3 bg-white h-12 rounded-2xl flex items-center justify-center cursor-pointer"
-            >
-              <button>{num}</button>
-            </div>
-          ))}
+        <div className="flex gap-4 px-5 py-4 text-black font-bold text-2xl">
+          <div
+            onClick={() => handleClick("7")}
+            className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center"
+          >
+            <button>7</button>
+          </div>
+          <div
+            onClick={() => handleClick("8")}
+            className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center"
+          >
+            <button>8</button>
+          </div>
+          <div
+            onClick={() => handleClick("9")}
+            className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center"
+          >
+            <button>9</button>
+          </div>
         </div>
 
         {/* 0 Button */}
         <div className="text-black text-2xl font-bold px-5">
           <div
             onClick={() => handleClick("0")}
-            className="w-full bg-white h-12 rounded-2xl flex items-center justify-center cursor-pointer"
+            className="flex justify-center bg-white w-full h-12 rounded-2xl items-center"
           >
             <button>0</button>
           </div>
