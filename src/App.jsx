@@ -13,100 +13,111 @@ function App() {
   };
 
   return (
-    <div className="bg-blue-800 w-full h-screen flex justify-center items-center">
-      <div className="bg-black w-[500px] h-[600px] rounded-2xl px-10 py-20">
-        {/* // 1st */}
-        <div className="flex gap-4 text-black">
-          {/* // 1.1 */}
-          <div className="flex justify-center bg-white w-70 h-12 rounded-2xl items-center">
+    <div className="bg-blue-800 min-h-screen flex justify-center items-center p-4">
+      <div className="bg-black w-full max-w-md sm:max-w-lg md:max-w-xl rounded-2xl px-5 py-10">
+        {/* 1st Row */}
+        <div className="flex gap-4 mb-6">
+          {/* Input Box */}
+          <div className="bg-white h-12 rounded-2xl flex items-center justify-center lg:w-100 w-50">
             <input
               value={inputValue}
               onClick={(e) => setInputValue(e.target.value)}
-              className="outline-none text-xl font-bold text-center"
+              className="outline-none text-xl font-bold text-center bg-transparent"
+              readOnly
             />
           </div>
-          {/* // 1.2 */}
-          <div onClick={() => resultclr()} className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center cursor-pointer">
+          {/* Clear Button */}
+          <div
+            onClick={resultclr}
+            className="lg:w-20 w-20 bg-white h-12 rounded-2xl flex items-center justify-center cursor-pointer"
+          >
             <h1 className="text-xl font-semibold">Clear</h1>
           </div>
         </div>
-        {/* // 2nd */}
-        <div className="text-white font-semibold text-2xl">
-          {/* // 2.1 */}
-          <div className="flex gap-4 px-3 py-4">
-            <div onClick={() => handleClick("+")} className="flex justify-center bg-yellow-600 w-35 h-12 rounded-2xl items-center">
-              <button>+</button>
-            </div>
-            {/* // 2.2 */}
-            <div onClick={() => result()} className="flex justify-center bg-yellow-600 w-60 h-12 rounded-xl items-center cursor-pointer">
-              <button>=</button>
-            </div>
+
+        {/* + and = Buttons */}
+        <div className="flex gap-4 mb-6 text-white text-2xl font-semibold px-5">
+          <div
+            onClick={() => handleClick("+")}
+            className="w-1/3 bg-yellow-600 h-12 rounded-2xl flex items-center justify-center cursor-pointer"
+          >
+            <button>+</button>
+          </div>
+          <div
+            onClick={result}
+            className="w-2/3 bg-yellow-600 h-12 rounded-xl flex items-center justify-center cursor-pointer"
+          >
+            <button>=</button>
           </div>
         </div>
-        {/* // 3rd */}
-        <div className="flex gap-4 px-3 text-white font-bold text-2xl">
-          {/* // 3.1 */}
-          <div onClick={() => handleClick("*")} className="flex justify-center bg-yellow-600 w-40 h-12 rounded-2xl items-center">
+
+        {/* *, -, / Buttons */}
+        <div className="flex gap-4 mb-6 text-white text-2xl font-bold px-5">
+          <div
+            onClick={() => handleClick("*")}
+            className="w-1/3 bg-yellow-600 h-12 rounded-2xl flex items-center justify-center cursor-pointer"
+          >
             <button>*</button>
           </div>
-          {/* // 3.2 */}
-          <div onClick={() => handleClick("-")} className="flex justify-center bg-yellow-600 w-40 h-12 rounded-2xl items-center">
+          <div
+            onClick={() => handleClick("-")}
+            className="w-1/3 bg-yellow-600 h-12 rounded-2xl flex items-center justify-center cursor-pointer"
+          >
             <button>-</button>
           </div>
-          {/* // 3.3 */}
-          <div onClick={() => handleClick("/")} className="flex justify-center bg-yellow-600 w-40 h-12 rounded-2xl items-center">
+          <div
+            onClick={() => handleClick("/")}
+            className="w-1/3 bg-yellow-600 h-12 rounded-2xl flex items-center justify-center cursor-pointer"
+          >
             <button>/</button>
           </div>
         </div>
-        {/* // 4th */}
-        <div className="flex gap-4 px-3 text-black font-bold py-4">
-          {/* // 4.1 */}
-          <div onClick={() => handleClick("1")} className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center">
-            <button>1</button>
-          </div>
-          {/* // 4.2 */}
-          <div onClick={() => handleClick("2")} className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center">
-            <button>2</button>
-          </div>
-          {/* // 4.3 */}
-          <div onClick={() => handleClick("3")} className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center">
-            <button>3</button>
-          </div>
+
+        {/* Numbers 1–3 */}
+        <div className="flex gap-4 mb-4 text-black text-2xl font-bold px-5">
+          {[1, 2, 3].map((num) => (
+            <div
+              key={num}
+              onClick={() => handleClick(num.toString())}
+              className="w-1/3 bg-white h-12 rounded-2xl flex items-center justify-center cursor-pointer"
+            >
+              <button>{num}</button>
+            </div>
+          ))}
         </div>
-        {/* // 5th */}
-        <div className="flex gap-4 px-3 text-black font-bold">
-          {/* // 5.1 */}
-          <div onClick={() => handleClick("4")} className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center">
-            <button>4</button>
-          </div>
-          {/* // 5.2 */}
-          <div onClick={() => handleClick("5")} className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center">
-            <button>5</button>
-          </div>
-          {/* // 5.3 */}
-          <div onClick={() => handleClick("6")} className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center">
-            <button>6</button>
-          </div>
+
+        {/* Numbers 4–6 */}
+        <div className="flex gap-4 mb-4 text-black text-2xl font-bold px-5">
+          {[4, 5, 6].map((num) => (
+            <div
+              key={num}
+              onClick={() => handleClick(num.toString())}
+              className="w-1/3 bg-white h-12 rounded-2xl flex items-center justify-center cursor-pointer"
+            >
+              <button>{num}</button>
+            </div>
+          ))}
         </div>
-        {/* // 6th */}
-        <div className="flex gap-4 px-3 py-4 text-black font-bold">
-          {/* // 6.1 */}
-          <div onClick={() => handleClick("7")} className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center">
-            <button>7</button>
-          </div>
-          {/* // 6.2 */}
-          <div onClick={() => handleClick("8")} className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center">
-            <button>8</button>
-          </div>
-          {/* // 6.3 */}
-          <div onClick={() => handleClick("9")} className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center">
-            <button>9</button>
-          </div>
+
+        {/* Numbers 7–9 */}
+        <div className="flex gap-4 mb-4 text-black text-2xl font-bold px-5">
+          {[7, 8, 9].map((num) => (
+            <div
+              key={num}
+              onClick={() => handleClick(num.toString())}
+              className="w-1/3 bg-white h-12 rounded-2xl flex items-center justify-center cursor-pointer"
+            >
+              <button>{num}</button>
+            </div>
+          ))}
         </div>
-        {/* // 7th */}
-        <div className="flex justify-center text-black font-bold">
-          {/* // 7.1 */}
-          <div onClick={() => handleClick("0")} className="flex justify-center bg-white w-100 h-12 rounded-2xl items-center">
+
+        {/* 0 Button */}
+        <div className="text-black text-2xl font-bold px-5">
+          <div
+            onClick={() => handleClick("0")}
+            className="w-full bg-white h-12 rounded-2xl flex items-center justify-center cursor-pointer"
+          >
             <button>0</button>
           </div>
         </div>

@@ -1,12 +1,36 @@
-# React + Vite
+# Responsive Calculator App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive calculator built with React and styled using Tailwind CSS. This calculator allows users to perform basic arithmetic operations with a clean, modern UI that works on all screen sizes — mobile, tablet, and desktop.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Built using React functional components and hooks (useState)
 
-## Expanding the ESLint configuration
+- 🎨 Styled with Tailwind CSS (fully responsive)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ Supports +, -, \*, and / operations
+
+- 💡 Simple and readable codebase
+
+- 📱 Mobile-first responsive layout
+
+## Tech Stack
+
+- **React**
+- **Tailwind CSS**
+- **Vite (for fast dev envirnment)**
+
+⚠️ **Note**:
+This calculator uses eval() for simplicity, which is not recommended in production due to potential security issues. In a production-grade app, consider using a proper math parser like mathjs.
+
+## Screenshots
+
+- Large Screen
+  ![alt text](lg-calculator.png)
+
+- Small Screen
+  ![alt text](sm-calculator.png)
+
+## Demo Link
+
+[live Demo]()
