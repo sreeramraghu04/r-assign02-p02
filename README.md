@@ -33,4 +33,4 @@ This calculator uses eval() for simplicity, which is not recommended in producti
 
 ## Demo Link
 
-[Live Demo]()
+[Live Demo](https://calculatorassign02p02.netlify.app/)
