@@ -14,22 +14,22 @@ function App() {
 
   return (
     <div className="bg-blue-800 min-h-screen flex justify-center items-center p-4">
-      <div className="bg-black w-full max-w-md sm:max-w-lg md:max-w-xl rounded-2xl px-5 py-10">
+      <div className="bg-black w-full max-w-md sm:max-w-lg md:max-w-xl rounded-2xl px-5 py-15">
         {/* 1st Row */}
-        <div className="flex gap-4 mb-6">
+        <div className="flex flex-row gap-4 mb-6">
           {/* Input Box */}
-          <div className="bg-white h-12 rounded-2xl flex items-center justify-center lg:w-110 md:w-110 w-50">
+          <div className="bg-white h-12 rounded-2xl flex items-center justify-center w-[440px]">
             <input
               value={inputValue}
               onClick={(e) => setInputValue(e.target.value)}
-              className="outline-none text-xl font-bold text-center bg-transparent"
+              className="outline-none text-xl font-bold text-center bg-transparent w-full px-2"
               readOnly
             />
           </div>
           {/* Clear Button */}
           <div
             onClick={resultclr}
-            className="lg:w-20 w-20 bg-white h-12 rounded-2xl flex items-center justify-center cursor-pointer"
+            className="w-[160px] bg-white h-12 rounded-2xl flex items-center justify-center cursor-pointer"
           >
             <h1 className="text-xl font-semibold">Clear</h1>
           </div>
