@@ -33,4 +33,4 @@ This calculator uses eval() for simplicity, which is not recommended in producti
 
 ## Demo Link
 
-[live Demo]()
+[Live Demo]()

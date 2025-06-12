@@ -18,7 +18,7 @@ function App() {
         {/* 1st Row */}
         <div className="flex gap-4 mb-6">
           {/* Input Box */}
-          <div className="bg-white h-12 rounded-2xl flex items-center justify-center lg:w-100 w-50">
+          <div className="bg-white h-12 rounded-2xl flex items-center justify-center lg:w-110 md:w-110 w-50">
             <input
               value={inputValue}
               onClick={(e) => setInputValue(e.target.value)}
