@@ -77,19 +77,19 @@ function App() {
         <div className="flex gap-4 px-5 text-black font-bold py-4 text-2xl">
           <div
             onClick={() => handleClick("1")}
-            className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center"
+            className="flex justify-center bg-white w-full h-12 rounded-2xl items-center"
           >
             <button>1</button>
           </div>
           <div
             onClick={() => handleClick("2")}
-            className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center"
+            className="flex justify-center bg-white w-full h-12 rounded-2xl items-center"
           >
             <button>2</button>
           </div>
           <div
             onClick={() => handleClick("3")}
-            className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center"
+            className="flex justify-center bg-white w-full h-12 rounded-2xl items-center"
           >
             <button>3</button>
           </div>
@@ -99,19 +99,19 @@ function App() {
         <div className="flex gap-4 px-5 text-black font-bold text-2xl">
           <div
             onClick={() => handleClick("4")}
-            className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center"
+            className="flex justify-center bg-white w-full h-12 rounded-2xl items-center"
           >
             <button>4</button>
           </div>
           <div
             onClick={() => handleClick("5")}
-            className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center"
+            className="flex justify-center bg-white w-full h-12 rounded-2xl items-center"
           >
             <button>5</button>
           </div>
           <div
             onClick={() => handleClick("6")}
-            className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center"
+            className="flex justify-center bg-white w-full h-12 rounded-2xl items-center"
           >
             <button>6</button>
           </div>
@@ -121,19 +121,19 @@ function App() {
         <div className="flex gap-4 px-5 py-4 text-black font-bold text-2xl">
           <div
             onClick={() => handleClick("7")}
-            className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center"
+            className="flex justify-center bg-white w-full h-12 rounded-2xl items-center"
           >
             <button>7</button>
           </div>
           <div
             onClick={() => handleClick("8")}
-            className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center"
+            className="flex justify-center bg-white w-full h-12 rounded-2xl items-center"
           >
             <button>8</button>
           </div>
           <div
             onClick={() => handleClick("9")}
-            className="flex justify-center bg-white w-35 h-12 rounded-2xl items-center"
+            className="flex justify-center bg-white w-full h-12 rounded-2xl items-center"
           >
             <button>9</button>
           </div>
